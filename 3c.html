@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Movie Tickets</title>
+</head>
+<body>
+  <table>
+    <tr>
+    <td><h1>Book movie tickets online</h1></td>
+    </tr>
+    <tr>
+      <td><label>Number of Tickets: </label></td>
+      
+  
+        <td><input type="text" id="txtPrice"></td>
+        </tr>
+    <tr>
+      <td><label>price per ticket</label></td>
+  
+    <td><input type="text" placeholder=150 disabled></td>
+    </tr>
+    <tr>
+    <td><input type="button" value="Calculate Total" onClick=CalculateTotal() /></td>
+    </tr>
+    <tr>
+      <td>price:</td>
+      <td><input type="text" id="p"></td>
+    </tr>
+    <tr>
+      <td>Discount amount:</td>
+      <td><input type="text" id="d"></td>
+    </tr>
+    <tr>
+      <td>total amount:</td>
+      <td><input type="text" id="t"></td>
+    </tr>
+    </table>
+
+     <script>
+    function CalculateTotal(){
+    let noof=document.getElementById('txtPrice').value;
+    let price=noof*150;
+    let discount=price*0.1;
+    let total=price-discount;
+    let pr=document.getElementById('p');
+    pr.value=price;
+    let di=document.getElementById('d');
+    di.value=discount;
+    let to=document.getElementById('t');
+    to.value=total;
+    }
+
+
+    
+  </script>
+</body>
+</html>
